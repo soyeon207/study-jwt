@@ -22,3 +22,8 @@ spring:
 logging:
   level:
     me.soyeon207: DEBUG
+
+jwt:
+  header: Authorization
+  secret: 4oCYc295ZW9uLXRlY2gtc3ByaW5nLWJvb3Qtand0LXR1dG9yaWFsLXNlY3JldC1zaWx2ZXJuaW5lLXRlY2gtc3ByaW5nLWJvb3Qtand0LXR1dG9yaWFsLXNlY3JldOKAmQo=
+  token-validity-in-seconds: 86400
