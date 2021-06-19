@@ -19,6 +19,13 @@ INSERT INTO USER_AUTHORITY (USER_ID, AUTHORITY_NAME) values (1, 'ROLE_USER');
 INSERT INTO USER_AUTHORITY (USER_ID, AUTHORITY_NAME) values (1, 'ROLE_ADMIN');
 ```
 
+postman 에 API 추가 후 Tests 에 아래 쿼리 추가 
+```
+var jsonData = JSON.parse(responseBody)
+pm.globals.set("jwt_tutorial_token", jsonData.token);
+```
+Authorization 에 Bearer Token 에 `{{jwt_tutorial_token}}` 추가 
+
 ### dependency
 - Spring WEB
 - Spring Security
@@ -26,9 +33,14 @@ INSERT INTO USER_AUTHORITY (USER_ID, AUTHORITY_NAME) values (1, 'ROLE_ADMIN');
 - H2 Database
 - Lombok
 - Validation
+- io.jsonwebtoken
 
 ### API
-| 메소드 | URL | 설명 | 파라미터 |
-|------|---|---|---|
-| GET | /api/hello | hello |  |
+| 메소드 | URL | 설명 | 파라미터 | 권한 |
+|------|---|---|---|---|
+| GET | /api/hello | hello |  | X |
+| POST | /api/authenticate | 로그인 API | username, password | X |
+| POST | /api/signup | 회원가입 API | username, password, nickname | X |
+| GET | /api/user | 현재 security 에 저장된 user 정보 가져오는 API | | USER, ADMIN |
+| GET | /api/user/{nickname} | 해당 nickname 에 해당하는 정보 가져오는 API | ADMIN |
 
