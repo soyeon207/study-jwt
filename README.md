@@ -2,7 +2,7 @@
 
 [Spring Boot JWT Tutorial](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8-jwt/dashboard) 소스 코드입니다
 
-### 블로그 글 
+### BLOG
 [JWT란 ?](https://soyeon207.github.io/%EA%B0%9C%EB%B0%9C/2021/06/20/jwt.html)
 
 ### SetUp
