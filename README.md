@@ -42,5 +42,5 @@ Authorization 에 Bearer Token 에 `{{jwt_tutorial_token}}` 추가
 | POST | /api/authenticate | 로그인 API | username, password | X |
 | POST | /api/signup | 회원가입 API | username, password, nickname | X |
 | GET | /api/user | 현재 security 에 저장된 user 정보 가져오는 API | | USER, ADMIN |
-| GET | /api/user/{nickname} | 해당 nickname 에 해당하는 정보 가져오는 API | ADMIN |
+| GET | /api/user/{nickname} | 해당 nickname 에 해당하는 정보 가져오는 API | | ADMIN |
 
